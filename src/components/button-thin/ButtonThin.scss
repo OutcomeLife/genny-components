@@ -1,0 +1,16 @@
+@import './buttonThin.default.scss';
+.btnThin {
+    font-weight: bold;
+    width: 100px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+    border-radius: 3px;
+    margin: 5px 10px;
+    cursor: pointer;
+    height: 20px;
+    font-size: $font-size-xs;
+}

@@ -1,0 +1,19 @@
+@import '../style/color.scss';
+
+/* default button */
+
+.btn-default {
+    background-color: $btn-default-default;
+}
+
+.btn-success {
+    background-color: $btn-success-default;
+}
+
+.btn-danger {
+    background-color: $btn-danger-default;
+}
+
+.btn-warning {
+    background-color: $btn-warning-default;
+}

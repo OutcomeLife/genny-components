@@ -1,0 +1,17 @@
+/*************** primary colors  **************/
+/************ Button **************/
+/************ Button End**************/
+/*************** primary colors End **************/
+.cyan .content {
+  background-color: #ecf0f1;
+  color: black; }
+  .cyan .content h1 {
+    color: blue; }
+
+.content {
+  height: inherit;
+  display: block;
+  width: 100%;
+  transition: margin-left .5s;
+  z-index: -1;
+  overflow-x: auto; }

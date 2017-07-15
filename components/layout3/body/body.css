@@ -1,0 +1,22 @@
+/*************** primary colors  **************/
+/************ Button **************/
+/************ Button End**************/
+/*************** primary colors End **************/
+.blue .body {
+  background-color: #ecf0f1;
+  color: black; }
+  .blue .body h1 {
+    color: blue; }
+
+.body {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 60px;
+  bottom: 40px;
+  height: 100%;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  display: -webkit-flex;
+  /* Safari */ }

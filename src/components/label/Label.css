@@ -1,0 +1,19 @@
+.label {
+  height: 34px;
+  width: auto;
+  padding: 6px 20px;
+  border-radius: 4px;
+  color: #555555;
+  font-size: 14px; }
+
+.label-primary {
+  border: 2px solid #00887A; }
+
+.label-danger {
+  border: 2px solid #a6262c; }
+
+.label-success {
+  border: 2px solid #3cc196; }
+
+.label-warning {
+  border: 2px solid #e8951e; }

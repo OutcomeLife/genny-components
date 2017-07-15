@@ -1,0 +1,28 @@
+@import '../style/global/theme.scss';
+.label{
+  height: 34px;
+  width: auto;
+  padding: 6px 20px;
+  border-radius: 4px;
+  color: $color-mid-dark;
+  font-size: $font-size-s;
+  }
+
+
+  .label-primary {
+    border: 2px solid $color-primary;
+  }
+
+  .label-danger{
+    border: 2px solid $color-error;
+  }
+
+
+
+  .label-success{
+    border: 2px solid $color-success;
+  }
+
+  .label-warning{
+    border: 2px solid $color-secondary;
+  }

@@ -1,0 +1,16 @@
+@import '../style/global/Theme.scss';
+textarea {
+    background-color: $color-mid-light;
+    color: $color-dark;
+}
+
+textarea:focus {
+    border: 1px solid $color-primary-light;
+    box-shadow: 0px 0px 5px #d3d3d3;
+    background-color: $color-light !important;
+    color: $color-primary-light;
+}
+
+textarea:focus::placeholder {
+    color: $color-primary-light;
+}

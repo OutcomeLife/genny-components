@@ -1,0 +1,9 @@
+/*************** primary colors  **************/
+/************ Button **************/
+/************ Button End**************/
+/*************** primary colors End **************/
+.blue .content {
+  background-color: #ecf0f1;
+  color: black; }
+  .blue .content h1 {
+    color: blue; }

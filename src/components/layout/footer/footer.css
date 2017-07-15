@@ -1,0 +1,28 @@
+/*************** primary colors  **************/
+/************ Button **************/
+/************ Button End**************/
+/*************** primary colors End **************/
+.default .footer {
+  background-color: white; }
+
+/*************** primary colors  **************/
+/************ Button **************/
+/************ Button End**************/
+/*************** primary colors End **************/
+.cyan .footer {
+  background-color: white; }
+
+/*************** primary colors  **************/
+/************ Button **************/
+/************ Button End**************/
+/*************** primary colors End **************/
+.blue .footer {
+  background-color: white; }
+
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 40px; }

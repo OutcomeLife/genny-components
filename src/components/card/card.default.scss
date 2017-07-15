@@ -1,0 +1,6 @@
+@import '../style/global/Theme.scss';
+.card {
+    background-color: $color-light;
+    color: $color-dark;
+    box-shadow: 1px 1px 3px $color-mid;
+}

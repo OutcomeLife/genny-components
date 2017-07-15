@@ -1,0 +1,16 @@
+/*************** primary colors  **************/
+/************ Button **************/
+/************ Button End**************/
+/*************** primary colors End **************/
+/* default button */
+.btn-default {
+  background-color: #009688; }
+
+.btn-success {
+  background-color: #00c853; }
+
+.btn-danger {
+  background-color: #d50000; }
+
+.btn-warning {
+  background-color: #ffab40; }

@@ -1,0 +1,29 @@
+.cookiebar {
+  background-color: #005B4F;
+  color: #ffffff; }
+
+.cookiebar {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  font-size: 12px; }
+
+.cookiebar-inner {
+  display: flex;
+  justify-content: start;
+  margin: 0px 15%; }
+
+.cookie-icon {
+  font-size: 14px; }
+
+.cookie-label {
+  margin: 1px 0px 0px 10px; }
+
+.cookie-label-group {
+  display: flex;
+  align-items: center; }
+
+.arrow-icon {
+  margin-left: 15px;
+  font-size: 16px; }

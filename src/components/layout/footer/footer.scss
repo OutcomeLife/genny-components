@@ -1,0 +1,11 @@
+@import './footer.default.scss';
+@import './footer.cyan.scss';
+@import './footer.blue.scss';
+.footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+}

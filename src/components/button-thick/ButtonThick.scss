@@ -1,0 +1,22 @@
+@import './buttonThick.default.scss';
+
+.btnThick{
+  font-weight: bold;
+  width:100px;
+  display:inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  vertical-align: middle;
+  border:none;
+  border-radius:3px;
+  color:$color-light;  
+  margin:5px 10px;
+  cursor:pointer;  
+  height: 40px;
+  font-size:12px;
+}
+
+.btn-icon{
+  font-size:$font-size-l;
+}

@@ -1,0 +1,10 @@
+.btnThin {
+  color: #ffffff;
+  background-color: transparent;
+  box-shadow: 0px 0px 2px #ffffff;
+  height: 20px; }
+
+.btnThin:hover,
+.btnThin:active {
+  background-color: #ffffff;
+  color: #00887A; }

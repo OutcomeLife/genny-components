@@ -1,0 +1,9 @@
+.themeOne {
+  background-color: #4EB8AA; }
+
+.themeOne:hover,
+.themeOne:active {
+  background-color: #4EB899; }
+
+.btn-icon {
+  font-size: 18px; }

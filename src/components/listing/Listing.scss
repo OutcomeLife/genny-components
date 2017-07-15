@@ -1,0 +1,58 @@
+@import '../style/global/theme.scss';
+
+.listing {
+  min-height: 200px;
+  .listing-title{
+    color: $color-dark-hover !important;
+    text-transform: uppercase;
+    font-size: $font-size-xxxl;
+  }
+
+  width:100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: $color-light-hover;
+  padding:20px;
+  height:200px;
+
+  .listing-icon{
+    flex:0.6;
+    padding-top: 2%;
+    padding-left: 2%;
+  }
+
+  .listing-content{
+    flex:3;
+    font-size: 15px;
+    color: $color-mid-dark;
+  }
+
+
+  .listing-subtitle{
+    .subtitle-text{
+      font-size: 20px;
+      padding-right:20px;
+    }
+    .material-icons {
+
+      font-size: 18px;
+    }
+
+
+    .subtitle-company{
+      color: $color-warning-hover;
+      font-size: 20px;
+    }
+    font-size: $font-size-xxl;
+    color: inherit;
+  }
+
+
+  .listing-call-action{
+    flex:1;
+    flex-direction:column;
+    padding:6% 6%;
+  }
+
+}

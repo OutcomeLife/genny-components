@@ -1,0 +1,10 @@
+@import '../../../style/color.scss';
+.blue {
+    .content {
+        background-color: $body_background;
+        color: $black;
+        h1 {
+            color: blue;
+        }
+    }
+}

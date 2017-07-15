@@ -1,0 +1,21 @@
+@import '../../../style/color.scss';
+.blue {
+    .sidebar {
+        background-color: $blue6;
+        a {
+            color: $black;
+        }
+        a:hover,
+        .offcanvas a:focus {
+            background-color: $blue7;
+            color: $white;
+        }
+        a.active {
+            background-color: $blue8;
+            color: $white;
+        }
+        .divider {
+            background-color: $blue7;
+        }
+    }
+}

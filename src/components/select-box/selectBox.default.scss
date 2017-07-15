@@ -1,0 +1,36 @@
+@import '../style/global/Theme.scss';
+
+
+.select-box {
+    background-color: $color-mid-light;
+    color: $color-dark;
+}
+
+
+.select-dropdown {
+    background-color: $color-mid-light;
+    color: $color-mid-dark;
+    box-shadow: 0px 0px 2px $color-mid-dark;
+
+}
+
+
+.select-option:hover {
+    background-color: $color-primary-light;
+    color: $color-light;
+}
+
+.select-icon {
+    color: $color-mid;
+}
+
+.select-box:focus {
+    border: 1px solid $color-primary-light;
+    box-shadow: 0px 0px 5px #d3d3d3;
+    background-color: $color-light !important;
+    color: $color-primary-light;
+}
+
+.select-box:focus::placeholder {
+    color: $color-primary-light;
+}

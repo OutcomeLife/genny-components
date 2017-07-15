@@ -1,0 +1,11 @@
+@import './content.default.scss';
+@import './content.cyan.scss';
+@import './content.blue.scss';
+.content {
+    height: inherit;
+    display: block;
+    width: 100%;
+    transition: margin-left .5s;
+    z-index: -1;
+    overflow-x: auto;
+}

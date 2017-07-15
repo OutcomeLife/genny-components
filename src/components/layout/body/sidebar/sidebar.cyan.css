@@ -1,0 +1,17 @@
+/*************** primary colors  **************/
+/************ Button **************/
+/************ Button End**************/
+/*************** primary colors End **************/
+.cyan .sidebar {
+  background-color: #00ACC1; }
+  .cyan .sidebar a {
+    color: black; }
+  .cyan .sidebar a:hover,
+  .cyan .sidebar .offcanvas a:focus {
+    background-color: #0097A7;
+    color: white; }
+  .cyan .sidebar a.active {
+    background-color: #00838F;
+    color: white; }
+  .cyan .sidebar .divider {
+    background-color: #0097A7; }

@@ -1,0 +1,17 @@
+@import './inputBox.default.scss';
+
+input{
+ height:30px;
+  width:200px;
+  border:none;
+  border-radius:3px;
+  font-size:12px;
+  padding:10px;
+  box-sizing:border-box;
+}
+
+input:focus{
+  outline:none;
+
+}
+

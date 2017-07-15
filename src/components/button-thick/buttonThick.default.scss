@@ -1,0 +1,14 @@
+@import '../style/global/Theme.scss';
+
+.themeOne {
+    background-color: $color-primary-light;
+}
+
+.themeOne:hover,
+.themeOne:active {
+    background-color: $color-primary-hover;
+}
+
+.btn-icon {
+    font-size: $font-size-l;
+}

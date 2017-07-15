@@ -1,0 +1,16 @@
+/*************** primary colors  **************/
+/************ Button **************/
+/************ Button End**************/
+/*************** primary colors End **************/
+.default .sidebar {
+  background-color: #00897b; }
+  .default .sidebar a {
+    color: black; }
+  .default .sidebar a:hover, .default .sidebar .offcanvas a:focus {
+    background-color: #00796b;
+    color: white; }
+  .default .sidebar a.active {
+    background-color: #00695c;
+    color: white; }
+  .default .sidebar .divider {
+    background-color: #00796b; }

@@ -1,0 +1,35 @@
+.navbar {
+  background-color: #00887A;
+  color: #ffffff; }
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 24px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0; }
+
+.navbar-inner {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 15%; }
+
+.navbar-right {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: end; }
+
+.navbar-left {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: start; }

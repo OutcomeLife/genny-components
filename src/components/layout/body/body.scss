@@ -1,0 +1,16 @@
+@import './body.default.scss';
+@import './body.cyan.scss';
+@import './body.blue.scss';
+.body {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 60px;
+    bottom: 40px;
+    height: 100%;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    display: -webkit-flex;
+    /* Safari */
+}
