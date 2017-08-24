@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { VerticleLayout } from '../../components';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { TextField, DropDownMenu, MenuItem, DatePicker, TimePicker } from 'material-ui';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import demoData from './demoData';
 import Container from '../../components/container';
 
@@ -11,7 +10,6 @@ class ExampleVerticleLayout extends Component {
 
     constructor(props) {
         super(props)
-        injectTapEventPlugin();
         this.state = { error: {}, value: {}, valueDropdown: {}, currentValue: {} }
         this.handleInput = this.handleInput.bind(this);
         this.handleClickMenuItem = this.handleClickMenuItem.bind(this);
@@ -65,11 +63,11 @@ class ExampleVerticleLayout extends Component {
                         <MuiThemeProvider>
                             <div>
                                 <TextField
-                                    hintText={data.name}
-                                    floatingLabelText={data.name}
-                                    onBlur={(e) => this.validate(e, data.validation, data.errorText, data.code)}
-                                    onChange={(e) => this.handleInput(e, data.validation, data.errorText, data.code)}
-                                    errorText={this.state.error === null ? this.state.error : this.state.error[data.code]}
+                                    hintText={ data.name }
+                                    floatingLabelText={ data.name }
+                                    onBlur={ (e) => this.validate(e, data.validation, data.errorText, data.code) }
+                                    onChange={ (e) => this.handleInput(e, data.validation, data.errorText, data.code) }
+                                    errorText={ this.state.error === null ? this.state.error : this.state.error[data.code] }
                                 />
                             </div>
                         </MuiThemeProvider>);
@@ -90,12 +88,12 @@ class ExampleVerticleLayout extends Component {
                     a.push(
                         <MuiThemeProvider>
                             <div>
-                            <DropDownMenu
-                                value={value()}
-                                style={{ marginLeft: "-25px" }}
-                            >
-                                {data.options.map(option => <MenuItem value={option} primaryText={option} key={option} onClick={(e) => this.handleClickMenuItem(e, option, data.code)} />)}
-                            </DropDownMenu>
+                                <DropDownMenu
+                                    value={ value() }
+                                    style={ { marginLeft: "-25px" } }
+                                >
+                                    { data.options.map(option => <MenuItem value={ option } primaryText={ option } key={ option } onClick={ (e) => this.handleClickMenuItem(e, option, data.code) } />) }
+                                </DropDownMenu>
                             </div>
                         </MuiThemeProvider>);
                     break;
@@ -103,7 +101,7 @@ class ExampleVerticleLayout extends Component {
                     a.push(
                         <MuiThemeProvider>
                             <div>
-                            <DatePicker hintText={data.name} mode="landscape" onChange={this.handleDatePickerChange} />
+                                <DatePicker hintText={ data.name } mode="landscape" onChange={ this.handleDatePickerChange } />
                             </div>
                         </MuiThemeProvider>);
                     break;
@@ -111,7 +109,7 @@ class ExampleVerticleLayout extends Component {
                     a.push(
                         <MuiThemeProvider>
                             <div>
-                            <TimePicker hintText="time picker" />
+                                <TimePicker hintText="time picker" />
                             </div>
                         </MuiThemeProvider>);
                     break;
@@ -119,7 +117,7 @@ class ExampleVerticleLayout extends Component {
                     a.push(
                         <MuiThemeProvider>
                             <div>
-                                <TextField hintText={data.label} rows={8} floatingLabelText={data.label} multiLine={true} />
+                                <TextField hintText={ data.label } rows={ 8 } floatingLabelText={ data.label } multiLine={ true } />
                             </div>
                         </MuiThemeProvider>);
                     break;
@@ -136,8 +134,8 @@ class ExampleVerticleLayout extends Component {
     render() {
 
         return (
-            <div style={{ marginLeft: "20%" }}>
-                {this.processJson()}
+            <div style={ { marginLeft: "20%" } }>
+                { this.processJson() }
                 {/*<p style={{ color: "black" }}> error message : {JSON.stringify(this.state.error, null, 4)} <br />
                     values : {JSON.stringify(this.state.value, null, 4)} <br />
                     valueDropdown: {JSON.stringify(this.state.valueDropdown, null, 4)} <br />

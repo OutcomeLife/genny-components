@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.message-component {
+  min-height: 60px;
+  width: 100%;
+  .info {
+    color: #00529B;
+    background-color: #BDE5F8;
+
+  }
+  .success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+  }
+  .error {
+    color: #D8000C;
+    background-color: #FFBABA;
+  }
+  .warning {
+    color: #9F6000;
+    background-color: #FEEFB3;
+  }
+  .info, .success, .error, .warning {
+    padding: 12px;
+    vertical-align: middle;
+    border-radius: 2px;
+    .svg-icon {
+      img {
+        width: 30px;
+        vertical-align: middle;
+        margin-left: 10px;
+      }
+    }
+    .close {
+      float: right;
+      cursor: pointer;
+      margin: 0 12px 0 40px;
+    }
+  }
+  .info i, .success i, .error i, .warning i {
+    font-size: 1.5em;
+    cursor: pointer;
+    margin: 0 22px;
+    vertical-align: middle;
+  }
+  .close {
+    font-size: 1em !important;
+    margin-top: 5px !important;
+  }
+
+}

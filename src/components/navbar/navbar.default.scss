@@ -1,5 +1,8 @@
-@import '../style/global/Theme.scss';
-.navbar {
-    background-color: $color-primary;
-    color: $color-light;
-}
+@import '../style/color.scss';
+
+    .default {
+        .nav {
+            background-color: $teal5;
+            color: $white;
+        }
+    }

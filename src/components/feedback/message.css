@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+.message-component {
+  min-height: 60px;
+  width: 100%; }
+  .message-component .info {
+    color: #00529B;
+    background-color: #BDE5F8; }
+  .message-component .success {
+    color: #4F8A10;
+    background-color: #DFF2BF; }
+  .message-component .error {
+    color: #D8000C;
+    background-color: #FFBABA; }
+  .message-component .warning {
+    color: #9F6000;
+    background-color: #FEEFB3; }
+  .message-component .info, .message-component .success, .message-component .error, .message-component .warning {
+    padding: 12px;
+    vertical-align: middle;
+    border-radius: 2px; }
+    .message-component .info .svg-icon img, .message-component .success .svg-icon img, .message-component .error .svg-icon img, .message-component .warning .svg-icon img {
+      width: 30px;
+      vertical-align: middle;
+      margin-left: 10px; }
+    .message-component .info .close, .message-component .success .close, .message-component .error .close, .message-component .warning .close {
+      float: right;
+      cursor: pointer;
+      margin: 0 12px 0 40px; }
+  .message-component .info i, .message-component .success i, .message-component .error i, .message-component .warning i {
+    font-size: 1.5em;
+    cursor: pointer;
+    margin: 0 22px;
+    vertical-align: middle; }
+  .message-component .close {
+    font-size: 1em !important;
+    margin-top: 5px !important; }

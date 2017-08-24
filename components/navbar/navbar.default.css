@@ -1,3 +1,7 @@
-.navbar {
-  background-color: #00887A;
-  color: #ffffff; }
+/*************** primary colors  **************/
+/************ Button **************/
+/************ Button End**************/
+/*************** primary colors End **************/
+.default .nav {
+  background-color: #009688;
+  color: white; }

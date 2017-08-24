@@ -14,9 +14,7 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _components = require('components');
-
-require('./navbar.scss');
+require('./message.css');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26,85 +24,91 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Navbar = function (_Component) {
-  _inherits(Navbar, _Component);
+var Feedback = function (_Component) {
+  _inherits(Feedback, _Component);
 
-  function Navbar() {
-    _classCallCheck(this, Navbar);
+  function Feedback() {
+    _classCallCheck(this, Feedback);
 
-    return _possibleConstructorReturn(this, (Navbar.__proto__ || Object.getPrototypeOf(Navbar)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Feedback.__proto__ || Object.getPrototypeOf(Feedback)).call(this));
+
+    _this.componentDidMount = function () {
+      var timeout = _this.props.timeout;
+
+      timeout !== undefined && setTimeout(function () {
+        _this.setState({ display: false });
+      }, timeout * 1000);
+    };
+
+    _this.handleClose = function () {
+      _this.setState({
+        display: false
+      });
+    };
+
+    _this.state = { display: true };
+    return _this;
   }
 
-  _createClass(Navbar, [{
+  _createClass(Feedback, [{
     key: 'render',
     value: function render() {
       var _props = this.props,
-          logo = _props.logo,
-          user = _props.user,
-          dropdownListItem = _props.dropdownListItem,
-          toggleClick = _props.toggleClick;
+          message = _props.message,
+          messageType = _props.messageType,
+          icon = _props.icon,
+          style = _props.style;
 
-      var showDropdown = dropdownListItem === undefined || user === undefined ? null : _react2.default.createElement(_components.Dropdown, { user: user, dropdownListItem: dropdownListItem, className: 'default' });
+      var messageIcon = messageType === 'success' ? 'done' : messageType;
+      var display = this.state.display;
+
+      if (!display) {
+        return null;
+      }
       return _react2.default.createElement(
         'div',
-        { className: 'nav' },
+        { className: 'message-component' },
         _react2.default.createElement(
           'div',
-          { className: 'navbar-brand' },
+          { className: messageType, style: style },
           _react2.default.createElement(
-            'table',
-            { className: 'navbar-brand' },
+            'i',
+            { className: 'material-icons' },
+            messageIcon
+          ),
+          message,
+          _react2.default.createElement(
+            'span',
+            { className: 'svg-icon' },
             _react2.default.createElement(
-              'tbody',
-              null,
-              _react2.default.createElement(
-                'tr',
-                null,
-                _react2.default.createElement(
-                  'td',
-                  null,
-                  ' ',
-                  _react2.default.createElement(
-                    'i',
-                    { className: 'material-icons', onClick: toggleClick },
-                    ' menu'
-                  )
-                ),
-                _react2.default.createElement(
-                  'td',
-                  null,
-                  ' ',
-                  _react2.default.createElement(
-                    'a',
-                    { className: 'logo' },
-                    logo
-                  )
-                )
-              )
+              'i',
+              { className: 'material-icons' },
+              icon
             )
+          ),
+          _react2.default.createElement(
+            'i',
+            { className: 'material-icons close', onClick: this.handleClose },
+            'close'
           )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'nav-right' },
-          showDropdown
         )
       );
     }
   }]);
 
-  return Navbar;
+  return Feedback;
 }(_react.Component);
 
-Navbar.propTypes = {
-  user: _propTypes2.default.object,
-  logo: _propTypes2.default.string,
-  dropdownListItem: _propTypes2.default.array,
-  toggleClick: _propTypes2.default.func
+Feedback.propTypes = {
+  message: _propTypes2.default.string.isRequired,
+  timeout: _propTypes2.default.number,
+  messageType: _propTypes2.default.string,
+  style: _propTypes2.default.object,
+  icon: _propTypes2.default.string
+
+};
+Feedback.defaultProps = {
+  messageType: 'info'
 };
 
-Navbar.defaultProps = {
-  logo: 'Company Logo'
-};
-
-exports.default = Navbar;
+exports.default = Feedback;

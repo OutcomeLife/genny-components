@@ -10,7 +10,11 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-require('./dropdown.css');
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+require('./dropdown.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28,38 +32,35 @@ var Dropdown = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (Dropdown.__proto__ || Object.getPrototypeOf(Dropdown)).call(this));
 
+    _this.renderDropdown = function () {
+      var showUserProfile = _this.state.showUserProfile;
+
+      if (showUserProfile === false) {
+        document.getElementById('dropdown-container').style.display = 'block';
+        _this.setState({ showUserProfile: true, transform: 'rotate(180deg)' });
+      } else {
+        document.getElementById('dropdown-container').style.display = 'none';
+        _this.setState({ showUserProfile: false, transform: 'rotate(0deg)' });
+      }
+    };
+
+    _this.hideDropdown = function () {
+      document.getElementById('dropdown-container').style.display = 'none';
+      _this.setState({ showUserProfile: false, transform: 'rotate(0deg)' });
+    };
+
     _this.state = { showUserProfile: false, transform: 'rotate(0)' };
-    _this._renderDropdown = _this._renderDropdown.bind(_this);
-    _this._hideDropdown = _this._hideDropdown.bind(_this);
     return _this;
   }
 
   _createClass(Dropdown, [{
-    key: '_renderDropdown',
-    value: function _renderDropdown() {
-      var showUserProfile = this.state.showUserProfile;
-
-      if (showUserProfile === false) {
-        document.getElementById('dropdown-container').style.display = 'block';
-        this.setState({ showUserProfile: true, transform: 'rotate(180deg)' });
-      } else {
-        document.getElementById('dropdown-container').style.display = 'none';
-        this.setState({ showUserProfile: false, transform: 'rotate(0deg)' });
-      }
-    }
-  }, {
-    key: '_hideDropdown',
-    value: function _hideDropdown() {
-      document.getElementById('dropdown-container').style.display = 'none';
-      this.setState({ showUserProfile: false, transform: 'rotate(0deg)' });
-    }
-  }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
           user = _props.user,
           dropdownListItem = _props.dropdownListItem,
-          className = _props.className;
+          className = _props.className,
+          style = _props.style;
       var _state = this.state,
           showUserProfile = _state.showUserProfile,
           transform = _state.transform;
@@ -67,19 +68,18 @@ var Dropdown = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        { className: className },
+        { className: className, style: style },
         _react2.default.createElement(
           'div',
           { className: 'dropdown' },
           _react2.default.createElement(
             'div',
-            { tabIndex: '0', className: showUserProfile ? 'user-profile-active' : 'user-profile', onBlur: this._hideDropdown, onClick: this._renderDropdown, style: {
+            { tabIndex: '0', className: showUserProfile ? 'user-profile-active' : 'user-profile', onBlur: this.hideDropdown, onClick: this.renderDropdown, style: {
                 transition: '0.3s ease-in'
               } },
             _react2.default.createElement(
               'span',
               null,
-              'Hi, ',
               user.name
             ),
             _react2.default.createElement(
@@ -127,5 +127,18 @@ var Dropdown = function (_Component) {
 
   return Dropdown;
 }(_react.Component);
+
+Dropdown.propTypes = {
+  user: _propTypes2.default.object,
+  dropdownListItem: _propTypes2.default.array.isRequired,
+  className: _propTypes2.default.string,
+  style: _propTypes2.default.object
+
+};
+
+Dropdown.defaultProps = {
+  user: { name: 'unique_prakash2002@yahoo.com', image: '/images/user.png' },
+  className: 'default'
+};
 
 exports.default = Dropdown;

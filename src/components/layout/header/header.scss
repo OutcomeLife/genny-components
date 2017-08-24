@@ -1,13 +1,14 @@
+ @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
  @import './header.default.css';
  @import './header.cyan.css';
  @import './header.blue.css';
- @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
  .nav {
      position: fixed;
      height: 60px;
      width: 100%;
      top: 0; // overflow: hidden;
      left: 0; // z-index: 999;
+     z-index:2;
      .navbar-brand {
          height: inherit;
          float: left;

@@ -1,0 +1,67 @@
+/*************** primary colors  **************/
+/************ Button **************/
+/************ Button End**************/
+/*************** primary colors End **************/
+.default .sidebar {
+  background-color: #00897b; }
+
+.default .sidebar a {
+  color: black; }
+
+.default .sidebar a:hover, .default .sidebar .offcanvas a:focus {
+  background-color: #00796b;
+  color: white; }
+
+.default .sidebar a.active {
+  background-color: #00695c;
+  color: white; }
+
+.default .sidebar .divider {
+  background-color: #00796b; }
+
+.sidebar {
+  height: inherit;
+  width: 200px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: block;
+  transition: 0.5s;
+  padding-top: 40px; }
+
+.sidebar .title {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px; }
+
+.sidebar a {
+  padding: 10px 8px 10px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  transition: 0.3s; }
+
+.sidebar i {
+  float: right; }
+
+.sidebar .arrow {
+  float: left;
+  padding-right: 10px; }
+
+.sidebar .subMenu {
+  list-style: none;
+  color: black; }
+
+.sidebar .subMenu a {
+  font-size: 12px; }
+
+.sidebar .subMenu a :hover {
+  color: white; }
+
+.sidebar .divider {
+  height: 1px;
+  width: 100%;
+  display: block;
+  /* for use on default inline elements like span */
+  margin: 0;
+  overflow: hidden;
+  background-color: orange; }
