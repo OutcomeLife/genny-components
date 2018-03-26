@@ -16,7 +16,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _components = require('components');
 
-require('./navbar.scss');
+require('./Navbar.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
